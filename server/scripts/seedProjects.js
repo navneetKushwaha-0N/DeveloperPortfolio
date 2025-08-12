@@ -18,59 +18,16 @@ if (!process.env.MONGODB_URI) {
 
 const sampleProjects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-stack e-commerce platform built with MERN stack featuring user authentication, payment integration, admin dashboard, and real-time inventory management.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Stripe", "JWT"],
-    githubLink: "https://github.com/johndoe/ecommerce-platform",
-    liveLink: "https://ecommerce-demo.vercel.app",
-    featured: true,
-  },
-  {
-    title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, team collaboration features, and progress tracking.",
-    techStack: ["React", "TypeScript", "Node.js", "Socket.io", "PostgreSQL"],
-    githubLink: "https://github.com/johndoe/task-manager",
-    liveLink: "https://taskmanager-demo.vercel.app",
-    featured: true,
-  },
-  {
-    title: "Weather Dashboard",
-    description:
-      "A responsive weather dashboard that displays current weather conditions, forecasts, and interactive maps. Features location-based weather data and beautiful data visualizations.",
-    techStack: ["React", "Chart.js", "OpenWeather API", "Tailwind CSS"],
-    githubLink: "https://github.com/johndoe/weather-dashboard",
-    liveLink: "https://weather-dashboard-demo.vercel.app",
-    featured: false,
-  },
-  {
-    title: "Social Media Analytics",
-    description:
-      "A comprehensive analytics dashboard for social media metrics with real-time data processing, custom reporting, and automated insights generation.",
-    techStack: ["Next.js", "Python", "FastAPI", "Redis", "Chart.js"],
-    githubLink: "https://github.com/johndoe/social-analytics",
-    liveLink: "https://social-analytics-demo.vercel.app",
-    featured: false,
-  },
-  {
-    title: "Recipe Sharing Platform",
-    description:
-      "A community-driven recipe sharing platform where users can upload, share, and discover recipes. Features include ratings, comments, and meal planning.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Cloudinary"],
-    githubLink: "https://github.com/johndoe/recipe-platform",
-    liveLink: "https://recipes-demo.vercel.app",
-    featured: false,
-  },
-  {
-    title: "Real-time Chat Application",
-    description:
-      "A modern real-time chat application with multiple rooms, file sharing, emoji reactions, and user presence indicators. Built for scalability and performance.",
-    techStack: ["React", "Socket.io", "Node.js", "Redis", "JWT"],
-    githubLink: "https://github.com/johndoe/chat-app",
-    liveLink: "https://chat-demo.vercel.app",
-    featured: true,
-  },
+  title: "LUMO AI ChatBot",
+  description:
+    "An AI-powered chatbot built with MERN stack, featuring real-time responses, secure authentication, and an intuitive UI for interactive conversations.",
+  techStack: ["React", "Node.js", "Express", "MongoDB", "OpenAI API", "JWT"],
+  githubLink: "https://github.com/navneetKushwaha-0N/LUMO-AI-chatBot.git",
+  liveLink: "https://lumo-ai-chatbot.onrender.com",
+  featured: true,
+},
+
+  
 ]
 
 const seedProjects = async () => {
