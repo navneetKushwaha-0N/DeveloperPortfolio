@@ -17,15 +17,23 @@ if (!process.env.MONGODB_URI) {
 }
 
 const sampleProjects = [
-  {
-  title: "LUMO AI ChatBot",
-  description:
-    "An AI-powered chatbot built with MERN stack, featuring real-time responses, secure authentication, and an intuitive UI for interactive conversations.",
-  techStack: ["React", "Node.js", "Express", "MongoDB", "OpenAI API", "JWT"],
-  githubLink: "https://github.com/navneetKushwaha-0N/LUMO-AI-chatBot.git",
-  liveLink: "https://lumo-ai-chatbot.onrender.com",
-  featured: true,
-},
+{
+  "title": "LUMO AI (Gemini Powered)",
+  "description": "A custom AI chatbot powered by Google's Gemini API, featuring a sleek UI built with React, Tailwind CSS, and lucide-react icons. Supports real-time AI responses, secure API key integration, and responsive design for all devices.",
+  "techStack": [
+    "React",
+    "React DOM",
+    "Tailwind CSS",
+    "Tailwindcss",
+    "Lucide React",
+    "Vite",
+    "Gemini API"
+  ],
+  "githubLink": "https://github.com/navneetKushwaha-0N/LUMO-AI-chatBot.git",
+  "liveLink": "https://lumo-ai-chatbot.onrender.com",
+  "featured": true
+}
+
 
   
 ]
