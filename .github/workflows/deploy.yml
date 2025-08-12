@@ -1,0 +1,31 @@
+name: Deploy Backend to EC2
+
+on:
+  push:
+    branches:
+      - main  # jab main branch pe push hoga, deploy chalega
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: 15.206.123.97   # EC2 ka Public IP
+          username: ubuntu      # EC2 ka user
+          key: ${{ secrets.EC2_SSH_KEY }}   # GitHub Secrets me private key ka naam
+          script: |
+            cd ~/DeveloperPortfolio/server
+            git pull origin main
+            npm install
+            pm2 restart server || pm2 start server.js 
