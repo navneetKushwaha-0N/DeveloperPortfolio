@@ -28,8 +28,10 @@ app.use(
     origin: function (origin, callback) {
       const allowedOrigins = [
         process.env.CLIENT_URL,
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
+      "http://localhost:5173",
+  "https://developerportfolio-5evg.onrender.com",
+  "https://navneetkushwahadev.space",
+  "https://www.navneetkushwahadev.space"
       ]
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true)
