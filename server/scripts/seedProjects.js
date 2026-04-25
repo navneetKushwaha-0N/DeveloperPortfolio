@@ -19,13 +19,10 @@ if (!process.env.MONGODB_URI) {
 const sampleProjects = [
 {
   "title": "LUMO AI (Gemini Powered)",
-  "description": "A custom AI chatbot powered by Google's Gemini API, featuring a sleek UI built with React, Tailwind CSS, and lucide-react icons. Supports real-time AI responses, secure API key integration, and responsive design for all devices.",
+  "description": "LUMO AI ,Gemini API-powered  with sleek UI and real-time responses.",
   "techStack": [
     "React",
-    "React DOM",
     "Tailwind CSS",
-    "Tailwindcss",
-    "Lucide React",
     "Vite",
     "Gemini API"
   ],

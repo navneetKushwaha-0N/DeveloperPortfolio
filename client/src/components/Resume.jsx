@@ -3,10 +3,10 @@ import { motion } from "framer-motion"
 import { FaDownload, FaFileAlt } from "react-icons/fa"
 
 const Resume = () => {
+
   const handleDownload = () => {
-    // Create a link element and trigger download
     const link = document.createElement("a")
-    link.href = "/resume.pdf" // Make sure to add your resume PDF to the public folder
+    link.href = "/resume.pdf"
     link.download = "Navneet_kushwaha.pdf"
     document.body.appendChild(link)
     link.click()
@@ -14,68 +14,163 @@ const Resume = () => {
   }
 
   return (
-    <section id="resume" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Resume</h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto mb-8"></div>
+    <section
+      id="resume"
+      className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden"
+    >
 
-          <div className="max-w-2xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg p-8 mb-8"
-            >
-              <FaFileAlt className="text-6xl text-primary-600 mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Download My Resume</h3>
-              <p className="text-gray-600 mb-6">
-                Get a detailed overview of my experience, education, and skills. Available in PDF format for easy
-                viewing and printing.
+      {/* background glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16 text-center md:text-left"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+            Resume
+          </h2>
+
+          <p className="text-slate-600 max-w-xl">
+            Download my resume to explore my skills, experience, and projects in detail.
+          </p>
+        </motion.div>
+
+
+        {/* Main Layout */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+
+
+          {/* LEFT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+
+            <div className="
+              bg-white border border-slate-200
+              rounded-xl p-6 shadow-sm
+            ">
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                Professional Summary
+              </h3>
+
+              <p className="text-slate-600">
+                Full Stack Developer specializing in MERN stack, cloud integration,
+                and scalable web applications. Passionate about building efficient,
+                user-friendly solutions.
+              </p>
+            </div>
+
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4">
+
+              <div className="
+                bg-white border border-slate-200
+                rounded-lg p-4 text-center shadow-sm
+              ">
+                <div className="text-2xl font-bold text-blue-600">10+</div>
+                <div className="text-sm text-slate-600">Projects</div>
+              </div>
+
+              <div className="
+                bg-white border border-slate-200
+                rounded-lg p-4 text-center shadow-sm
+              ">
+                <div className="text-2xl font-bold text-indigo-600">20+</div>
+                <div className="text-sm text-slate-600">Technologies</div>
+              </div>
+
+              <div className="
+                bg-white border border-slate-200
+                rounded-lg p-4 text-center shadow-sm
+              ">
+                <div className="text-2xl font-bold text-green-600">Fresher</div>
+                <div className="text-sm text-slate-600">Status</div>
+              </div>
+
+            </div>
+
+          </motion.div>
+
+
+          {/* RIGHT SIDE DOWNLOAD CARD */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+
+            <div className="
+              relative
+              bg-white/70 backdrop-blur-lg
+              border border-slate-200
+              rounded-2xl
+              p-10
+              shadow-lg
+              text-center
+              hover:shadow-xl
+              transition-all duration-300
+            ">
+
+              {/* icon */}
+              <div className="
+                w-20 h-20 mx-auto mb-6
+                flex items-center justify-center
+                rounded-full
+                bg-blue-100
+              ">
+                <FaFileAlt className="text-blue-600 text-3xl" />
+              </div>
+
+
+              <h3 className="text-2xl font-semibold text-slate-800 mb-3">
+                My Resume
+              </h3>
+
+              <p className="text-slate-600 mb-8">
+                Download a detailed PDF version of my resume including skills,
+                projects, and experience.
               </p>
 
+
+              {/* download button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleDownload}
-                className="inline-flex items-center space-x-3 bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="
+                  inline-flex items-center gap-3
+                  bg-blue-600 hover:bg-blue-700
+                  text-white
+                  px-8 py-4
+                  rounded-lg
+                  font-semibold
+                  shadow-md hover:shadow-lg
+                  transition-all duration-300
+                "
               >
                 <FaDownload />
-                <span>Download Resume</span>
+                Download Resume
               </motion.button>
-            </motion.div>
 
-            {/* Quick Summary */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="grid md:grid-cols-3 gap-6 text-center"
-            >
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="text-3xl font-bold text-primary-600 mb-2">💡</div>
-                <div className="text-gray-600">Actively Learning</div>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="text-3xl font-bold text-primary-600 mb-2">10+</div>
-                <div className="text-gray-600">Projects Completed</div>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="text-3xl font-bold text-primary-600 mb-2">20+</div>
-                <div className="text-gray-600">Technologies</div>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
+            </div>
+
+          </motion.div>
+
+
+        </div>
+
       </div>
+
     </section>
   )
 }

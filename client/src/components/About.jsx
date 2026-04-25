@@ -38,24 +38,40 @@ const About = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <p className="text-lg text-gray-600 leading-relaxed">
-             Hello! I'm Navneet, a dedicated Full Stack Developer with a strong passion for crafting impactful web applications. With hands-on experience in the MERN stack, I take pride in transforming complex challenges into clean, user-friendly, and efficient digital solutions.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Beyond the code, I enjoy exploring new tech trends, contributing to meaningful projects, and guiding fellow developers through mentorship and writing. I'm a firm believer in lifelong learning and always strive to stay ahead in the ever-evolving tech landscape.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              My mission is to build products that not only function flawlessly but also deliver real value and enhance the user experience in meaningful ways.
-            </p>
-          </motion.div>
+         <motion.div
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <div className="relative group">
+
+    {/* Glow Border (ONLY BORDER EFFECT) */}
+    <div className="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 opacity-80 group-hover:opacity-100 transition duration-500">
+      <div className="absolute inset-0 rounded-2xl blur-md bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 opacity-40"></div>
+    </div>
+
+    {/* Main Content Box (No glass background, clean white) */}
+    <div className="relative rounded-2xl bg-white border border-white/20 px-6 py-7 md:px-8 md:py-9 shadow-md">
+      <p className="text-lg text-gray-700 leading-relaxed mb-4">
+        Hello! I&apos;m Navneet, a dedicated Full Stack Developer with a strong passion
+        for crafting impactful web applications. With hands-on experience in the MERN
+        stack, I take pride in transforming complex challenges into clean, user-friendly,
+        and efficient digital solutions.
+      </p>
+      <p className="text-lg text-gray-700 leading-relaxed mb-4">
+        Beyond the code, I enjoy exploring new tech trends, contributing to meaningful
+        projects, and guiding fellow developers through mentorship and writing. I&apos;m a
+        firm believer in lifelong learning and always strive to stay ahead in the
+        ever-evolving tech landscape.
+      </p>
+      <p className="text-lg text-gray-700 leading-relaxed">
+        My mission is to build products that not only function flawlessly but also
+        deliver real value and enhance the user experience in meaningful ways.
+      </p>
+    </div>
+  </div>
+</motion.div>
 
           {/* Features Grid */}
           <motion.div
