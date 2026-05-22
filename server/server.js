@@ -6,7 +6,7 @@ import helmet from "helmet"
 import rateLimit from "express-rate-limit"
 import projectRoutes from "./routes/projects.js"
 import contactRoutes from "./routes/contact.js"
-
+import razorpayRoutes from "./routes/razorpay.routes.js"
 dotenv.config()
 
 const app = express()
@@ -67,6 +67,7 @@ mongoose.connection.on("error", (err) => {
 // Routes
 app.use("/api/projects", projectRoutes)
 app.use("/api/contact", contactRoutes)
+app.use('/api/razorpay', razorpayRoutes)
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
